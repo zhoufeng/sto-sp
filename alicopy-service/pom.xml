@@ -6,7 +6,7 @@
 		<artifactId>alicopy-web</artifactId>
 		<version>1.0.0-SNAPSHOT</version>
 	</parent>
-	<artifactId>alicopydubbo-htmlfetch-provider</artifactId>
+	<artifactId>alicopydubbo-service</artifactId>
 	<version>${project.parent.version}</version>
 	<packaging>jar</packaging>
 	<name>${project.artifactId}</name>
