@@ -37,6 +37,8 @@
       <module>alicopydubbo-aliapi-provider</module>
       <module>alicopy-web</module>
       <module>alicopy-service</module>
+<!--	  <module>aliutil</module>
+	  <module>commonutil</module>-->
   </modules>
 	<distributionManagement>
 		<repository>
@@ -253,7 +255,7 @@
 				<configuration>
 					<useSystemClassLoader>true</useSystemClassLoader>
 					<forkMode>once</forkMode>
-					<argLine>${argline}</argLine>
+					<!--<argLine>${argline}</argLine>-->
 					<systemProperties>
 						<!-- common shared -->
 						

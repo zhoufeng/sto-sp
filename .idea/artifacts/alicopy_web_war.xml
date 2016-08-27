@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="alicopy-web:war">
+    <output-path>$PROJECT_DIR$/alicopy-web/target</output-path>
+    <root id="archive" name="alicopy.war">
+      <element id="artifact" artifact-name="alicopy-web:war exploded" />
+    </root>
+  </artifact>
+</component>

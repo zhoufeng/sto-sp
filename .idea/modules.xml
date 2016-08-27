@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/alicopy-web/alicopy-web.iml" filepath="$PROJECT_DIR$/alicopy-web/alicopy-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alicopydubbo-aliapi-provider/alicopydubbo-aliapi-provider.iml" filepath="$PROJECT_DIR$/alicopydubbo-aliapi-provider/alicopydubbo-aliapi-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alicopydubbo-api/alicopydubbo-api.iml" filepath="$PROJECT_DIR$/alicopydubbo-api/alicopydubbo-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alicopydubbo-htmlfetch-provider/alicopydubbo-htmlfetch-provider.iml" filepath="$PROJECT_DIR$/alicopydubbo-htmlfetch-provider/alicopydubbo-htmlfetch-provider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alicopydubbo-parent.iml" filepath="$PROJECT_DIR$/alicopydubbo-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/alicopy-service/alicopydubbo-service.iml" filepath="$PROJECT_DIR$/alicopy-service/alicopydubbo-service.iml" />
+      <module fileurl="file://G:/workspace/commonworkspace/aliutil/aliutil.iml" filepath="G:/workspace/commonworkspace/aliutil/aliutil.iml" />
+      <module fileurl="file://G:/workspace/commonworkspace/commonutil/commonutil.iml" filepath="G:/workspace/commonworkspace/commonutil/commonutil.iml" />
+    </modules>
+  </component>
+</project>
