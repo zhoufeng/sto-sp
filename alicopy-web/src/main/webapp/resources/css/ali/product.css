@@ -1,0 +1,390 @@
+
+.icon-must, .icon-add, .icon-add-disabled, .icon-help, .icon-del-pic, .icon-info, .icon-menu-fold, .icon-menu-unfold, .icon-fold, .icon-warn, .icon-more, .icon-error, .icon-title, .icon-mixbatch, .icon-private, .icon-feedback, .icon-steppay, .icon-new, .icon-buyer-protect, .img-notice-icon, .img-suggest, .icon-page-fold, .icon-page-unfold {
+    background: url("http://img.china.alibaba.com/cms/upload/offer/postoffer/postoffer-icon-v8.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+
+.ali-main-content{
+	margin: 0 auto;
+    width: 990px;
+     font-family: "宋体";
+    line-height: 22px;
+}
+.ali-layout {
+    background: none repeat scroll 0 0 #fff;
+    border: 1px s	olid #d7d7d7;
+    border-radius: 5px;
+    margin: 8px 0;
+    padding: 8px 1px;
+    width: 986px;
+}
+.ali-layout::after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+}
+.ali-tit {
+    border-bottom: 1px solid #e4e4e4;
+    height: 24px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    padding: 0 20px 11px;
+     line-height: 1.1;
+}
+.ali-tit h3 {
+    color: #666;
+    float: left;
+    font-size: 14px;
+    font-weight: 700;
+}
+.viewcase-link {
+    margin-left: 16px;
+   
+}
+.fd-left {
+    float: left;
+    height:50%; margin-bottom:-12px;
+}
+.fd-right {
+    float: right;
+}
+.content-con{
+	color: #444;
+	font-family: "宋体";
+    line-height: 22px;
+
+}
+.content-con .form-line:after {
+    clear: both;
+    content: "";
+    display: block;
+    height: 0;
+}
+.content-con .form-line {
+    margin: 4px 0;
+    width: 100%;
+}
+.content-con .form-title {
+    float: left;
+    font-weight: 700;
+    padding: 0 0 0 10px;
+    text-align: right;
+    width: 120px;
+}
+.content-con .form-title span {
+    padding-left: 10px;
+}
+.icon-must {
+    background-position: 0 3px;
+    padding-left: 10px;
+    font-weight: 700;
+}
+.content-con .form-context {
+    float: left;
+    padding: 0 30px 0 0;
+    width: 822px;
+}
+.mod-offer-post-title .info-title-txt {
+    margin-right: 8px;
+    width: 370px;
+}
+.content-con .txt {
+    border: 1px solid #a0a0a0;
+
+    padding-left: 4px;
+    vertical-align: middle;
+}
+button, input, select, textarea {
+    font-size: 100%;
+}
+
+.product-speca-props:after, .mod-offer-post-properties .product-props:after, .mod-offer-post-properties .pro-item:after, .mod-offer-post-properties .pro-d:after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+}
+.mod-offer-post-properties .product-props, .mod-offer-post-properties .product-custom-props {
+    background: none repeat scroll 0 0 #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    line-height: 25px;
+    padding: 10px 7px;
+}
+.fd-clr:after {
+    clear: both;
+    content: " ";
+    display: block;
+    height: 0;
+}
+.mod-offer-post-properties .pro-item {
+    float: left;
+    line-height: 24px;
+    padding: 3px 0;
+}
+.fd-clr {
+}
+
+.mod-offer-post-properties .pro-t {
+    float: left;
+    text-align: right;
+    width: 120px;
+}
+
+body:nth-of-type(1) .mod-offer-post-properties .pro-form {
+    float: left;
+}
+.mod-offer-post-properties .pro-form {
+    margin-right: 4px;
+}
+.mod-offer-post-properties .span-item {
+    float: left;
+    list-style: outside none none;
+    padding-right: 15px;
+}
+.mod-offer-post-properties .pro-item span.diy-prop {
+    height: 26px;
+    padding: 0 2px;
+    width: 136px;
+}
+.mod-offer-post-properties .span-item::after {
+    clear: both;
+    display: block;
+    height: 0;
+}
+.mod-offer-post-properties .speca-props-ctrl {
+    float: left;
+    height: 26px;
+    margin-right: 16px;
+}
+.submod-product-speca-props .product-speca-props, .submod-product-custom-props .product-custom-props {
+    background: none repeat scroll 0 0 #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.mod-offer-post-trade-info .trade-tit {
+    float: left;
+    font-weight: 700;
+    padding-left: 10px;
+    text-align: right;
+    width: 120px;
+}
+
+.mod-offer-post-trade-info .trade-box {
+    float: left;
+    margin: 0;
+    width: 800px;
+}
+.mod-offer-post-trade-info .trade-box {
+    background: none repeat scroll 0 0 #fafafa;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    margin: 4px 30px;
+    padding: 5px 10px;
+}
+
+.mod-offer-post-uppic .oup-preview {
+    float: left;
+    position: relative;
+    width: 100%;
+    z-index: 10;
+}
+.mod-offer-post-uppic .imgs {
+    height: 112px;
+    overflow: hidden;
+}
+
+.mod-offer-post-uppic .imgs li {
+    float: left;
+    position: relative;
+    width: 144px;
+}
+.mod-offer-post-uppic .img-cont {
+    background-position: 0 -139px;
+    border: 1px solid #babcbd;
+    cursor: pointer;
+    height: 110px;
+    position: relative;
+    width: 110px;
+}
+.alicow, .offerscan-box .offerscan-star, .offerscan-box .offerscan-star span, .dot, .assistant .err-list li, .mod-offer-post-uppic .img-cont, .no-pic, .sys-info .dot {
+    background: url("http://img.china.alibaba.com/cms/upload/offer/postoffer/postoffer-bg-v4.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.mod-offer-post-uppic .full .img-cont {
+    background-image: none;
+    overflow: hidden;
+}
+.mod-offer-post-uppic .img-cont {
+    background-position: 0 -139px;
+    border: 1px solid #babcbd;
+    cursor: pointer;
+    height: 110px;
+    position: relative;
+    width: 110px;
+}
+.mod-offer-post-uppic .img-cont {
+    cursor: pointer;
+}
+.mod-offer-post-uppic .full .cont-img {
+    display: inline;
+}
+.mod-offer-post-uppic .cont-img {
+    display: none;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+}
+
+.mod-offer-post-properties .diy-prop-ctrl {
+    border-top: 1px solid #eee;
+    line-height: 25px;
+    margin-top: 4px;
+    padding: 3px 0;
+}
+
+.mod-offer-post-properties .add-diy-prop {
+    margin-right: 10px;
+}
+.icon-add {
+    background-position: 0 -15px;
+    display: inline-block;
+    padding-left: 20px;
+}
+.submod-product-speca-props .add-defined-values {
+    white-space: nowrap;
+}
+.mod-offer-post-properties input.diy-prop-name {
+    width: 95px;
+}
+
+.mod-offer-post-properties .del-diy-prop {
+    margin-left: 4px;
+}
+.pro-item span.diy-prop {
+    height: 26px;
+    padding: 0 2px;
+    width: 136px;
+}
+
+.submod-product-speca-props input.speca-text {
+    border: 1px solid #7e9db9;
+    height: 25px;
+    line-height: px;
+    padding-left: 4px;
+    font-size:11px;
+    width: 80px;
+}
+
+.mod-offer-post-properties .pro-item a.del-lnk {
+    visibility: hidden;
+}
+
+.mod-offer-post-properties .pro-item span.diy-prop-hover {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #ececec;
+    border-color: #aeaeae;
+    border-image: none;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    height: 25px;
+    width: 135px;
+}
+.mod-offer-post-properties span.diy-prop-hover a.del-lnk {
+    visibility: visible;
+}
+.mod-offer-post-picture-matching {
+    margin-top: 8px;
+}
+
+.mod-offer-post-picture-matching .form-context {
+    background: none repeat scroll 0 0 #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 5px 10px;
+    position: relative;
+    width: 800px;
+}
+.mod-offer-post-picture-matching .matching-pic-list {
+    margin: 10px 0;
+}
+.mod-offer-post-picture-matching .matching-pic-list li {
+    float: left;
+    text-align: center;
+    width: 78px;
+}
+.mod-offer-post-picture-matching .matching-pic-list li {
+    text-align: center;
+}
+
+.mod-offer-post-picture-matching .matching-pic-list .img-con {
+    background: none repeat scroll 0 0 #f5f5f5;
+    border: 1px solid #b9bbbc;
+    height: 66px;
+    margin-left: 3px;
+    position: relative;
+    width: 66px;
+}
+.mod-offer-post-picture-matching .matching-pic-list .img-con span {
+    border: 1px solid #fff;
+    color: #999999;
+    cursor: pointer;
+    display: inline-block;
+    height: 64px;
+    line-height: 64px;
+    overflow: hidden;
+    text-align: center;
+    width: 64px;
+}
+
+.mod-offer-post-picture-matching .matching-pic-list .empty .ctrl {
+    visibility: hidden;
+}
+.mod-offer-post-picture-matching .matching-pic-list .ctrl {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    visibility: visible;
+}
+
+.matching-pic-list .ctrl a {
+    background: url("http://img.china.alibaba.com/images/common/icon_v02/close6.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 16px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 16px;
+}
+.matching-pic-list .color-name {
+    height: 24px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.mod-offer-post-picture-matching .matching-pic-list .no-pic {
+    background: url("http://img.china.alibaba.com/cms/upload/offer/postoffer/postoffer-bg-v4.png") no-repeat scroll -23px -160px rgba(0, 0, 0, 0);
+    border: 1px solid #f5f5f5;
+}
+.mod-offer-post-uppic .ctrl {
+    bottom: 1px;
+    display: none;
+    font-size: 10pt;
+    padding-top: 10px;
+    position: absolute;
+    right: 33px;
+}
+
+.mod-offer-post-uppic .imgs li a {
+    background: url("http://img.china.alibaba.com/images/common/icon_v02/close6.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 16px;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 16px;
+}

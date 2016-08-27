@@ -1,0 +1,1 @@
+(function(){var r,n;r=[],n=function(){var r;return r=function(){return{restrict:"A",scope:{focusTrigger:"=focusBind"},link:function(r,n){return r.$watch("focusTrigger",function(c){return c===!0?(n[0].focus(),n[0].select(),r.focusTrigger=!1):void 0})}}}},define(r,n)}).call(this);

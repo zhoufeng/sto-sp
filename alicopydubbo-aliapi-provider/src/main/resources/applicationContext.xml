@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://imagecopy.kongjishise.com/xsd/dubbo.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
+        ">
+
+	<util:properties id="aliUtilConfig" location="classpath:aliutil_config.properties" />
+
+	<!-- 具体的实现bean -->
+	<!-- <bean id="fetchHtmlServiceImp" class="com.bohusoft.htmlfetch.service.FetchHtmlServiceImp" />
+	<bean id="aliImageHandleServiceImp" class="com.bohusoft.htmlfetch.service.AliImageHandleServiceImp" /> -->
+
+	<!-- 提供方应用信息，用于计算依赖关系 -->
+	<dubbo:application name="aliApi_provider" />
+
+	<!-- 使用multicast广播注册中心暴露服务地址 <dubbo:registry address="multicast://224.5.6.7:1234" 
+		/> -->
+
+	<!-- 使用zookeeper注册中心暴露服务地址 -->
+	<!-- <dubbo:registry address="zookeeper://192.168.1.109:2181" /> -->
+	<dubbo:registry address="zookeeper://10.173.81.111:2181" />
+	
+	<dubbo:provider timeout="5000" />
+
+	<!-- 用dubbo协议在20880端口暴露服务 -->
+	<dubbo:protocol name="dubbo" port="20881"  /> 
+
+
+	<!-- 声明需要暴露的服务接口 -->
+	<dubbo:service interface="com.bohusoft.dubboapi.service.AliApiService" ref="aliApiServiceImp"  >
+	</dubbo:service>
+	<dubbo:reference id="aliApiService" interface="com.bohusoft.dubboapi.service.AliApiService" />
+	
+		<!-- 激活spring的注解. -->
+	<context:annotation-config />
+
+	<!-- 使用annotation 自动注册bean, 并保证@Required、@Autowired的属性被注入 -->
+	<context:component-scan base-package="com.bohusoft">
+	</context:component-scan>
+	<bean id="bbyjfz" class="com.bohusoft.aliapi.util.AppInfo">
+		<constructor-arg name="appKey" value="1014423"></constructor-arg>
+		<constructor-arg name="appSecret" value="GNAxz1PoIdEN"></constructor-arg>
+		<constructor-arg name="appName" value="宝贝一键复制"></constructor-arg>
+		<constructor-arg name="redirectUri" value="http://imagecopy.kongjishise.com/alicopy"></constructor-arg>
+	</bean>
+	 <bean id="wpzxyx" class="com.bohusoft.aliapi.util.AppInfo">
+		<constructor-arg name="appKey" value="1014364"></constructor-arg>
+		<constructor-arg name="appSecret" value="4OfJ8Ot29sah"></constructor-arg>
+		<constructor-arg name="appName" value="旺铺装修营销"></constructor-arg>
+		<constructor-arg name="redirectUri" value="http://picer.kongjishise.com/picer/main/alibaba"></constructor-arg>
+	</bean>
+	<!-- <bean id="kxzt" class="com.bohusoft.aliapi.util.AppInfo">
+		<constructor-arg name="appKey" value="1017919"></constructor-arg>
+		<constructor-arg name="appSecret" value="gqOwxsOG58QU"></constructor-arg>
+		<constructor-arg name="appName" value="酷炫主图"></constructor-arg>
+		<constructor-arg name="redirectUri" value="http://zt.kongjishise.com/picer/main/alibaba"></constructor-arg>
+	</bean> -->
+	<bean id="wpzxyxfree" class="com.bohusoft.aliapi.util.AppInfo">
+		<constructor-arg name="appKey" value="1018632"></constructor-arg>
+		<constructor-arg name="appSecret" value="XYem8Wghb5W"></constructor-arg>
+		<constructor-arg name="appName" value="旺铺装修营销免费版"></constructor-arg>
+		<constructor-arg name="redirectUri" value="http://picerfree.kongjishise.com/picerfree/main/alibaba"></constructor-arg>
+	</bean>
+	<!-- <bean id="kxgl" class="com.bohusoft.aliapi.util.AppInfo">
+		<constructor-arg>1019762</constructor-arg>
+		<constructor-arg>VzCqKtzLqe</constructor-arg>
+		<constructor-arg>酷炫关联</constructor-arg>
+		<constructor-arg>http://gl.kongjishise.com/glpicer/main/alibaba</constructor-arg>
+	</bean>
+	<bean id="kxhb" class="com.bohusoft.aliapi.util.AppInfo">
+		<constructor-arg>1019749</constructor-arg>
+		<constructor-arg>PzLv0fdjUof</constructor-arg>
+		<constructor-arg>酷炫海报</constructor-arg>
+		<constructor-arg>http://hb.kongjishise.com/hbpicer/main/alibaba</constructor-arg>
+	</bean> -->
+
+	
+	
+	<!-- <bean id="nameMap" class="java.util.HashMap"> 
+	  <constructor-arg> 
+	   <map> 
+	    <entry key="xxx" value-ref="bbyjfz" /> 
+	   </map> 
+	  </constructor-arg> 
+	</bean>  -->
+	
+	<bean id="appKeySecrets" class="java.util.ArrayList"> 
+	  <constructor-arg> 
+	   <list> 
+	    <value>bbyjfz</value>
+	     <value>wpzxyx</value>
+	    <value>wpzxyxfree</value>
+	   <!--  <value>kxzt</value>
+	    <value>kxgl</value>  
+	    <value>kxhb</value> -->
+	   </list> 
+	  </constructor-arg> 
+	</bean> 
+
+
+</beans>

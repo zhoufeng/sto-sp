@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://imagecopy.kongjishise.com/xsd/dubbo.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
+        ">
+
+	<util:properties id="aliUtilConfig" location="classpath:aliutil_config.properties" />
+	
+	
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+	    <property name="location" value="classpath:dubbo_config.properties"></property>
+	</bean>
+	
+
+	<!-- 具体的实现bean -->
+	<!-- <bean id="fetchHtmlServiceImp" class="com.bohusoft.htmlfetch.service.FetchHtmlServiceImp" />
+	<bean id="aliImageHandleServiceImp" class="com.bohusoft.htmlfetch.service.AliImageHandleServiceImp" /> -->
+
+	<!-- 提供方应用信息，用于计算依赖关系 -->
+	<dubbo:application name="${dubbo.application.name}" />
+
+	<!-- 使用multicast广播注册中心暴露服务地址 <dubbo:registry address="multicast://224.5.6.7:1234" 
+		/> -->
+
+	<!-- 使用zookeeper注册中心暴露服务地址 -->
+	<dubbo:registry address="${dubbo.registry.address}" />
+	<!-- <dubbo:registry address="zookeeper://192.168.1.109:2181" /> -->
+	
+
+	<!-- 用dubbo协议在20880端口暴露服务 -->
+	<dubbo:protocol host="${dubbo.provider.host}" name="dubbo" port="20880"  /> 
+
+
+	<!-- 声明需要暴露的服务接口 -->
+	<dubbo:service interface="com.bohusoft.dubboapi.service.FetchHtmlService"
+		ref="fetchHtmlServiceImp" retries="1" cluster="failover" timeout="60000" version="${dubbo.current.version}" />
+			<dubbo:service interface="com.bohusoft.dubboapi.service.FetchCateHtmlService"
+		ref="fetchCateHtmlServiceImp" retries="2" cluster="failover" timeout="10000" version="${dubbo.current.version}" />
+	<dubbo:service interface="com.bohusoft.dubboapi.service.AliImageHandleService" ref="aliImageHandleServiceImp" retries="1" cluster="failover" version="${dubbo.current.version}" >
+		<dubbo:method name="saveImages" timeout="600000" loadbalance="leastactive"></dubbo:method>
+		<dubbo:method name="saveImage" timeout="300000"></dubbo:method>
+	</dubbo:service>
+	
+	
+	
+	
+	
+		<!-- 激活spring的注解. -->
+	<context:annotation-config />
+
+	<!-- 使用annotation 自动注册bean, 并保证@Required、@Autowired的属性被注入 -->
+	<context:component-scan base-package="com.bohusoft">
+	</context:component-scan>
+	<context:component-scan base-package="com.shenma.aliutil">
+	</context:component-scan>
+
+</beans>

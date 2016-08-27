@@ -1,0 +1,149 @@
+.table-text{
+	text-align:center;
+}
+
+.table th{ text-align: center;}
+.table th.td-1{width: 10%;}
+.table th.td-2{width: 20%;}
+.table th.td-4{width: 40%;}
+.table th.td-8{width: 80%;}
+.table th.auto{width: auto;}
+
+
+.fullbg {
+    background-color:Gray;
+    left:0px;
+    opacity:0.5;
+    position:absolute;
+    top:0px;
+    z-index:3;
+    filter:alpha(opacity=50); /* IE6 */
+    -moz-opacity:0.5; /* Mozilla */
+    -khtml-opacity:0.5; /* Safari */
+}
+
+.loadmask {
+    z-index: 100;
+    position: absolute;
+    top:0;
+    left:0;
+    -moz-opacity: 0.5;
+    opacity: .50;
+    filter: alpha(opacity=50);
+    background-color: #CCC;
+    width: 100%;
+    height: 100%;
+    zoom: 1;
+}
+.loadmask-msg {
+    z-index: 20001;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border:1px solid #6593cf;
+    background: #c3daf9;
+    padding:2px;
+}
+.loadmask-msg div {
+    padding:5px 10px 5px 5px;
+    line-height: 30px;
+	border:1px solid #a3bad9;
+    color:#222;
+    font:normal 15px tahoma, arial, helvetica, sans-serif;
+    cursor:wait;
+}
+.masked {
+    overflow: hidden !important;
+}
+.masked-relative {
+    position: relative !important;
+}
+.masked-hidden {
+    visibility: hidden !important;
+}
+
+
+
+
+h2 {
+    color: #555;
+    font-size: 23px;
+    font-weight: 400;
+    line-height: 1.1em;
+    margin-bottom: 15px;
+}
+
+
+.video_setting_div .m-tit {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 15px 0 20px;
+    padding: 5px 15px;
+}
+
+
+
+.m-music-list {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0;
+    padding: 20px;
+}
+.m-music-list ul{
+	margin: 0;
+}
+
+.m-music-list li {
+    display: inline-block;
+    font-size: 12px;
+    padding: 0 15px 0 15px;
+}
+.m-music-list label{
+	vertical-align: middle;
+}
+.submit-box a {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block;
+    font-family: 'Microsoft YaHei';
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    margin: 20px auto;
+    text-align: center;
+    width: 150px;
+    color: #555;
+    outline: medium none;
+    text-decoration: none;
+}
+
+
+.btn_music {
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	background: url('../images/play.png')
+		no-repeat center center;
+	background-size: 100% auto;
+	position: absolute;
+	z-index: 100;
+	right: 25px;
+	top: 35px;
+}
+
+.btn_music.on {
+	background-image:
+		url("../images/stop.png");
+}
+
+.imagecopy_li{
+	text-align:center;
+	vertical-align:middle;
+	width: 150px;
+	height: 150px;
+}
+.imagecopy_li img {
+	
+	max-width: 150px;
+	max-height: 150px;
+}

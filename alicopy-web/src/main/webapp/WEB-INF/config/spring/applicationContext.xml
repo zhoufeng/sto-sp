@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	   		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	   		http://www.springframework.org/schema/context
+	   		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+			http://www.springframework.org/schema/mvc 
+			http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
+
+	
+	
+
+	<!-- 配置注解驱动的Spring MVC Controller 的编程模型.注:次标签只在 Servlet MVC工作! -->
+	<mvc:annotation-driven>
+		<!--确保@@ResponseBody 返回字符串是，格式是 text/plain;charset=UTF-8; 因为默认的是ISO-8859-1; -->
+		<mvc:message-converters>
+			<bean class="org.springframework.http.converter.StringHttpMessageConverter">
+				<property name="supportedMediaTypes">
+					<list>
+						<value>text/plain;charset=UTF-8</value>
+						<value>text/html;charset=UTF-8</value>
+					</list>
+				</property>
+			</bean>
+			<bean class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+				<property name="objectMapper" ref="customObjectMapper"></property>
+			</bean>
+		</mvc:message-converters>
+
+	</mvc:annotation-driven>
+	<bean id="customObjectMapper" class="com.shenma.top.imagecopy.util.CustomObjectMapper"></bean>
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<mvc:exclude-mapping path="/resources/**" />
+			<bean class="com.shenma.top.interceptors.CommonInterceptor"></bean>
+		</mvc:interceptor>
+		 <mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<mvc:exclude-mapping path="/resources/**" />
+			<mvc:exclude-mapping path="/open/api/**" />
+			<mvc:exclude-mapping path="/login/ali" />
+			<mvc:exclude-mapping path="/picerrequest/login" />
+			<mvc:exclude-mapping path="/webkitrequest/**" />
+			<mvc:exclude-mapping path="/test/**" />
+			<mvc:exclude-mapping path="/globalcopy/**" />
+			<mvc:exclude-mapping path="/sale/**" />
+			<mvc:exclude-mapping path="/manager/getRealIp" />
+			<mvc:exclude-mapping path="/manager/**" />
+			<bean class="com.shenma.top.interceptors.LocalAliLoginInterceptor"></bean>
+		</mvc:interceptor> 
+	</mvc:interceptors>
+
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!--<property name="maxUploadSize"> <value>104857600</value> </property> 
+			<property name="maxInMemorySize"> <value>4096</value> </property> -->
+		<property name="defaultEncoding">
+			<value>UTF-8</value>
+		</property>
+	</bean>
+
+	<!-- <bean class="com.yunbang.picerali.webmvc.CustomHandlerExceptionResolver"/> -->
+	<!-- 配置springmvc同一异常处理 -->
+	<!-- <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver"> 
+		定义默认的异常处理页面，当该异常类型的注册时使用 <property name="defaultErrorView" value="error"></property> 
+		定义异常处理页面用来获取异常信息的变量名，默认名为exception <property name="exceptionAttribute" value="ex"></property> 
+		定义需要特殊处理的异常，用类名或完全路径名作为key，异常也页名作为值 <property name="exceptionMappings"> <props> 
+		<prop key="cn.basttg.core.exception.BusinessException">error-business</prop> 
+		<prop key="cn.basttg.core.exception.ParameterException">error-parameter</prop> 
+		这里还可以继续扩展对不同异常类型的处理 </props> </property> </bean> <bean id="exceptionHandler" 
+		class="com.yunbang.picerali.webmvc.CustomHandlerExceptionResolver"/> -->
+
+</beans>

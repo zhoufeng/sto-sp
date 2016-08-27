@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>登录红杏</title>
+    <link rel="stylesheet" href="/css/bootstrap.css"/>
+    <link rel="stylesheet" href="/css/login.css"/>
+    <link rel="stylesheet" href="/css/animate.css"/>
+</head>
+<body>
+
+<div class="container font-hei" ng-controller="LoginPageController" ng-cloak>
+    <div class="heading">
+        <h1 class="font-kai text-center text-danger">红杏</h1>
+
+        <h2 class="font-kai text-center text-muted">
+            往前一步，海阔天空
+        </h2>
+    </div>
+
+    <ng-view></ng-view>
+
+    <div class="alert alert-success animated bounce" ng-show="search().source=='logout'">
+        已成功退出登录
+    </div>
+
+    <div class="alert alert-warning animated bounce" ng-show="search().source=='force-login'">
+        请先登录 或 注册红杏账号（直接输入邮箱/手机号）
+    </div>
+
+    <div class="alert alert-warning animated bounce" ng-show="search().message">
+        {{ search().message }}
+    </div>
+
+    <p class="small text-muted text-center">如有问题，请联系官方QQ 56214850</p>
+</div>
+<script data-main="/js/front/login.js"
+        src="/js/libs/require.js"></script>
+</body>
+</html
