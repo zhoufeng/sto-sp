@@ -8,7 +8,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context-3.0.xsd
         http://code.alibabatech.com/schema/dubbo
-        http://www.kongjishise.com/xsd/dubbo.xsd
+        http://imagecopy.kongjishise.com/xsd/dubbo.xsd
         http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd
         ">
 

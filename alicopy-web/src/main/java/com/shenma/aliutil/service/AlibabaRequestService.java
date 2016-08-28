@@ -297,7 +297,8 @@ public class AlibabaRequestService {
 	
 	/**
 	 * 请求阿里巴巴API
-	 * @param session
+	 * @param method 方法
+	 * @param params	方法参数
 	 * @throws AliReqException 
 	 */
 	public Map<String,Object> reqAliApp(String method,Map<String,Object> params) throws AliReqException{

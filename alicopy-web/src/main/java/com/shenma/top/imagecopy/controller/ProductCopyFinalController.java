@@ -1,9 +1,11 @@
 package com.shenma.top.imagecopy.controller;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -31,6 +33,8 @@ public class ProductCopyFinalController {
 	@Autowired
 	private SaveTaskDao saveTaskDao;
 	
+
+
 	/**
 	 * 阿里巴巴单个复制
 	 * @param variables
@@ -38,11 +42,32 @@ public class ProductCopyFinalController {
 	 * @throws ApiException
 	 */
 	@RequestMapping(value="/saveAliItem")
-	@ResponseBody 
+	@ResponseBody
 	public Map<String,Object> saveAliItem(@RequestBody Map<String,Object> variables) throws ApiException{
 		return aliForeBackSevice.saveAliItem(variables,false);
 	}
-	
+
+
+	/**
+	 * 阿里巴巴批量复制
+	 * @param variables
+	 * @return
+	 * @throws ApiException
+	 */
+	@RequestMapping(value="/batchSaveAliItem")
+	@ResponseBody
+	public List<Map<String,Object>> batchSaveAliItem(@RequestBody Map<String,Object> variables) throws ApiException{
+		String[] urlsList=variables.get("urls").toString().split("");
+		List<Map<String,Object>> retList=new ArrayList<Map<String, Object>>();
+		for(String url:urlsList){
+			variables.put("url", url);
+			Map<String,Object> ret=aliForeBackSevice.saveAliItem(variables,false);
+			retList.add(ret);
+		}
+		//@TODO
+		return	retList;
+	}
+
 	/**
 	 * 淘宝单个复制
 	 * @param variables

@@ -4,7 +4,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://code.alibabatech.com/schema/dubbo
-        http://www.kongjishise.com/xsd/dubbo.xsd
+        http://imagecopy.kongjishise.com/xsd/dubbo.xsd
         ">
      
 	<dubbo:annotation package="com.shenma" />

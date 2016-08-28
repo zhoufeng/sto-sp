@@ -62,7 +62,7 @@
 											
 										
 											<div class="form-group has-info">
-												<label for="inputInfo"
+												<label
 													class="col-sm-2 control-label no-padding-right">淘宝或天猫多个网址(用enter键分隔):</label>
 
 												<div class="col-sm-10" >
