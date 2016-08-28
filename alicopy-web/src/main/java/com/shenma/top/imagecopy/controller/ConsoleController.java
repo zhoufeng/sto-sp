@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.shenma.aliutil.service.AliToken;
 import com.shenma.aliutil.util.AliConstant;
 import com.shenma.aliutil.util.memcache.MemCachedUtil;
 import com.taobao.api.ApiException;

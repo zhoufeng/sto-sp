@@ -38,7 +38,7 @@
 		            <value>classpath:config.properties</value>
 		            <value>classpath:db_config.properties</value>
 		            <value>classpath:dubbo_config.properties</value>
-		            <value>classpath:redis.properties</value>
+		            <!--<value>classpath:redis.properties</value>-->
 		        </list>
 		        
 	        </property>

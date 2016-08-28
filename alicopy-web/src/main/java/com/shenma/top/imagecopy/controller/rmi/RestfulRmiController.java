@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import com.shenma.aliutil.service.AliToken;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,13 +16,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.shenma.aliutil.exception.AliReqException;
 import com.shenma.aliutil.sdk.ali.auth.HostedAuthService;
-import com.shenma.aliutil.service.AliToken;
 import com.shenma.aliutil.service.AlibabaRequestService;
 import com.shenma.aliutil.util.AliConstant;
 import com.shenma.aliutil.util.BeanUtil;
 import com.shenma.aliutil.util.SessionUtil;
 import com.shenma.aliutil.util.memcache.MemCachedUtil;
-import com.shenma.top.imagecopy.util.Constant;
 import com.taobao.api.ApiException;
 
 @Controller

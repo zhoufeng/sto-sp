@@ -4,12 +4,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
 
+import com.shenma.aliutil.service.AliToken;
 import org.apache.log4j.Logger;
 
 import com.bohusoft.dubboapi.exception.DubboApiExceptionEnums;
 import com.shenma.aliutil.exception.AliReqException;
 import com.shenma.aliutil.service.AlbumService;
-import com.shenma.aliutil.service.AliToken;
 import com.shenma.aliutil.util.SessionUtil;
 
 /*@Component

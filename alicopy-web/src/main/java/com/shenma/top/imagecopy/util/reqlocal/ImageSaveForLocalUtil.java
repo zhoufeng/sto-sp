@@ -20,8 +20,6 @@ import java.util.Map;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 
-import net.coobird.thumbnailator.Thumbnails;
-import net.coobird.thumbnailator.geometry.Positions;
 
 import org.apache.activemq.util.ByteArrayOutputStream;
 import org.apache.log4j.Logger;

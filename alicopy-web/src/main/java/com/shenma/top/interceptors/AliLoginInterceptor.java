@@ -7,6 +7,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.shenma.aliutil.service.AliToken;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,11 +17,9 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 
 import com.shenma.aliutil.sdk.ali.auth.HostedAuthService;
-import com.shenma.aliutil.service.AliToken;
 import com.shenma.aliutil.service.AlibabaRequestService;
 import com.shenma.aliutil.util.AliConstant;
 import com.shenma.aliutil.util.SessionUtil;
-import com.shenma.top.imagecopy.util.ProxyLocalRequestUtil;
 
 
 @Controller

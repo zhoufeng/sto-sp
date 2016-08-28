@@ -29,6 +29,13 @@
 	<properties>
 		<skip_maven_deploy>true</skip_maven_deploy>
 	</properties>
-	
+
+	<dependencies>
+		<dependency>
+			<groupId>com.bohusoft</groupId>
+			<artifactId>commonutil</artifactId>
+			<version>${project.parent.version}</version>
+		</dependency>
+	</dependencies>
 	
 </project>

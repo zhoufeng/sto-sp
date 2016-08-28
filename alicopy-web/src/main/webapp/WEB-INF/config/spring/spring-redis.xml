@@ -9,7 +9,7 @@
             http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">  
   
  
-    <bean id="redisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">  
+ <!--   <bean id="redisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
         <property name="maxIdle" value="${redis.maxIdle}" />  
         <property name="maxActive" value="${redis.maxActive}" />  
         <property name="maxWait" value="${redis.maxWait}" />  
@@ -21,6 +21,6 @@
       
     <bean id="redisTemplate" class="org.springframework.data.redis.core.StringRedisTemplate">  
         <property name="connectionFactory"   ref="connectionFactory" />  
-    </bean>         
+    </bean>         -->
       
 </beans>

@@ -6,13 +6,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeoutException;
 
+import com.shenma.aliutil.service.AliToken;
 import net.rubyeye.xmemcached.exception.MemcachedException;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.shenma.aliutil.entity.goods.Offer;
-import com.shenma.aliutil.service.AliToken;
 import com.shenma.aliutil.service.AlibabaRequestService;
 import com.shenma.aliutil.util.AliConstant;
 import com.shenma.aliutil.util.SessionUtil;

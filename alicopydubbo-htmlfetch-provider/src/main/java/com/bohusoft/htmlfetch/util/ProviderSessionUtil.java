@@ -1,12 +1,12 @@
 package com.bohusoft.htmlfetch.util;
 
+import com.shenma.aliutil.service.AliToken;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.bohusoft.dubboapi.exception.DubboApiException;
 import com.bohusoft.dubboapi.exception.DubboApiExceptionEnums;
-import com.shenma.aliutil.service.AliToken;
 import com.shenma.aliutil.util.SessionUtil;
 import com.shenma.aliutil.util.memcache.MemCachedUtil;
 

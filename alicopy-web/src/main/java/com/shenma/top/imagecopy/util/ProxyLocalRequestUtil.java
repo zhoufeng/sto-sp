@@ -7,14 +7,12 @@ import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeoutException;
 
-import org.apache.commons.httpclient.methods.PostMethod;
+import com.shenma.aliutil.service.AliToken;
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.stereotype.Component;
 
 import com.alibaba.openapi.client.AlibabaClient;
 import com.alibaba.openapi.client.Request;
 import com.shenma.aliutil.sdk.ali.auth.HostedAuthService;
-import com.shenma.aliutil.service.AliToken;
 import com.shenma.aliutil.util.AliConstant;
 import com.shenma.aliutil.util.HttpOpenClient;
 import com.shenma.top.imagecopy.ecxeption.CopyBussinessException;
@@ -22,7 +20,7 @@ import com.shenma.top.imagecopy.ecxeption.CopyBussinessException;
 public class ProxyLocalRequestUtil {
 	
 	
-	public static LinkedHashMap<String,Object> reqAlibabaApi(String method,Map<String,Object> params,AliToken info,AlibabaClient client,Request apiRequest) throws InterruptedException, ExecutionException, TimeoutException, UnsupportedEncodingException, CopyBussinessException{
+	public static LinkedHashMap<String,Object> reqAlibabaApi(String method, Map<String,Object> params, AliToken info, AlibabaClient client, Request apiRequest) throws InterruptedException, ExecutionException, TimeoutException, UnsupportedEncodingException, CopyBussinessException{
 		LinkedHashMap<String,Object> ret=null;
 		String url=AliConstant.proxy_url;
 		//String cateURL="http://www.kongjishise.com:8080/alicopy/open/api";

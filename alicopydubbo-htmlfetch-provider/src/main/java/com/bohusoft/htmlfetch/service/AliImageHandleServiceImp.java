@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
+import com.shenma.aliutil.service.AliToken;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,7 +20,6 @@ import com.bohusoft.htmlfetch.util.ImageSaveManager;
 import com.bohusoft.htmlfetch.util.ProviderSessionUtil;
 import com.shenma.aliutil.exception.AliReqException;
 import com.shenma.aliutil.service.AlbumService;
-import com.shenma.aliutil.service.AliToken;
 import com.shenma.aliutil.util.AliConstant;
 import com.shenma.aliutil.util.SessionUtil;
 @Service

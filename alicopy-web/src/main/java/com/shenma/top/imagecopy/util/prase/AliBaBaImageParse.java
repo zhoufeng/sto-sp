@@ -16,7 +16,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import com.alibaba.openapi.client.util.JsonMapper;
 import com.shenma.top.imagecopy.util.JacksonJsonMapper;
 import com.shenma.top.imagecopy.util.JsonpUtil;
 import com.shenma.top.imagecopy.util.UrlParseUtil;

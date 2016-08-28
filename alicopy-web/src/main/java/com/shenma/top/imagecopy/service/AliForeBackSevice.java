@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.shenma.aliutil.service.AliToken;
 import org.apache.log4j.Logger;
 import org.jsoup.nodes.Document;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,6 @@ import org.springframework.stereotype.Service;
 import com.bohusoft.alicopy.parse.AlibabaDetailHtmlParse;
 import com.shenma.aliutil.entity.goods.Offer;
 import com.shenma.aliutil.exception.AliReqException;
-import com.shenma.aliutil.service.AliToken;
 import com.shenma.aliutil.util.SessionUtil;
 import com.shenma.top.imagecopy.dao.MqRecordItemDao;
 import com.shenma.top.imagecopy.dao.SaveTaskDao;
@@ -23,7 +23,6 @@ import com.shenma.top.imagecopy.entity.MqRecordItem;
 import com.shenma.top.imagecopy.entity.SaveTask;
 import com.shenma.top.imagecopy.util.JacksonJsonMapper;
 import com.shenma.top.imagecopy.util.JsonpUtil;
-import com.shenma.top.imagecopy.util.RunningTaskManager;
 import com.shenma.top.imagecopy.util.asynsave.AsynSaveUtil;
 import com.shenma.top.imagecopy.util.exception.BusinessException;
 

@@ -21,6 +21,7 @@ import javax.management.remote.JMXConnector;
 import javax.management.remote.JMXConnectorFactory;
 import javax.management.remote.JMXServiceURL;
 
+import com.shenma.aliutil.service.AliToken;
 import net.rubyeye.xmemcached.exception.MemcachedException;
 
 import org.apache.activemq.broker.BrokerService;
@@ -33,7 +34,6 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.shenma.aliutil.entity.goods.Offer;
-import com.shenma.aliutil.service.AliToken;
 import com.shenma.aliutil.util.AliConstant;
 import com.shenma.aliutil.util.SessionUtil;
 import com.shenma.aliutil.util.memcache.MemCachedUtil;

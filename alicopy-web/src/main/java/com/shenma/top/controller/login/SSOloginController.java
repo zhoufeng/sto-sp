@@ -6,9 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.shenma.aliutil.service.AliToken;
-import com.shenma.aliutil.util.memcache.MemCachedUtil;
-
 @Controller
 @RequestMapping("/osslogin")
 public class SSOloginController {
