@@ -15,6 +15,7 @@
 					</div>
 				</div>
 
+
 				<div class="widget-body"><div class="widget-body-inner" style="display: block;">
 					<div class="widget-main">
 						<form name="self_form" role="form" class="form-horizontal">
@@ -138,8 +139,9 @@
 						    <label for="name-2" class="control-label col-xs-1"> 图片方式:</label>
 						    <div class="col-xs-6">
 						    <label>
-							<input type="checkbox" class="ace" name="new_album">
-							<span class="lbl ">每一个宝贝的所有图片保存到新建的相册里(最多创建500个相册)</span>
+								<input type="checkbox" class="ace" name="new_album">
+								<span class="lbl ">每一个宝贝的所有图片保存到新建的相册里(最多创建500个相册)</span>
+							</label>
 						</div>
 						</div>
 						  
