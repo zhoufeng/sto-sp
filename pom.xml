@@ -373,7 +373,6 @@
 			<id>local</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
-
 			</activation>
 			<properties>
 				<env>local</env>

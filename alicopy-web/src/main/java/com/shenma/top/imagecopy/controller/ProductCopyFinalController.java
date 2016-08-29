@@ -57,14 +57,13 @@ public class ProductCopyFinalController {
 	@RequestMapping(value="/batchSaveAliItem")
 	@ResponseBody
 	public List<Map<String,Object>> batchSaveAliItem(@RequestBody Map<String,Object> variables) throws ApiException{
-		String[] urlsList=variables.get("urls").toString().split("");
+		List<String> urlList=(List<String>) variables.get("urlList");
 		List<Map<String,Object>> retList=new ArrayList<Map<String, Object>>();
-		for(String url:urlsList){
+		for(String url:urlList){
 			variables.put("url", url);
 			Map<String,Object> ret=aliForeBackSevice.saveAliItem(variables,false);
 			retList.add(ret);
 		}
-		//@TODO
 		return	retList;
 	}
 

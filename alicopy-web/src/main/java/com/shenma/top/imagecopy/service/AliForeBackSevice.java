@@ -172,7 +172,7 @@ public class AliForeBackSevice {
 			mqRecordItemDao.saveAndFlush(mqItem);
 			ret.put("errorCode", e.getCode());
 			ret.put("errorMsg", e.getMessage());
-			logger.error(e);
+			logger.error("保存阿里地址:["+mqItem.getUrl()+"]",e);
 			return ret;
 		}catch (DuplicateCopyException e) {
 			mqRecordItemDao.delete(mqItem);
@@ -185,7 +185,7 @@ public class AliForeBackSevice {
 			mqRecordItemDao.saveAndFlush(mqItem);
 			ret.put("errorCode",e.getCode());
 			ret.put("errorMsg", e.getMessage());
-			logger.error(e);
+			logger.error("保存阿里地址:["+mqItem.getUrl()+"]",e);
 			return ret;
 		} catch (Exception e) {
 			mqItem.setStatus(2);
@@ -197,7 +197,7 @@ public class AliForeBackSevice {
 			mqRecordItemDao.saveAndFlush(mqItem);
 			ret.put("errorCode", 101);
 			ret.put("errorMsg", "服务器错误!");
-			logger.error(e);
+			logger.error("保存阿里地址:["+mqItem.getUrl()+"]",e);
 			return ret;
 		}
 		

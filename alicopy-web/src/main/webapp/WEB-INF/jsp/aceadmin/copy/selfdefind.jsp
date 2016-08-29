@@ -15,7 +15,6 @@
 					</div>
 				</div>
 
-
 				<div class="widget-body"><div class="widget-body-inner" style="display: block;">
 					<div class="widget-main">
 						<form name="self_form" role="form" class="form-horizontal">

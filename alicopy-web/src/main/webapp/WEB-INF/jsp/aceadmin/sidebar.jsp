@@ -56,7 +56,8 @@
 			<ul class="submenu "  style="display: block; ">
 				<li name="item_copy_li" ><a href="${URL_ROOT}/top/productcopy/one"> 
 				<i class="icon-double-angle-right"></i> 单个宝贝复制</a></li>
-
+				<li name="item_copy_li"><a href="${URL_ROOT}/top/productcopy/batchalicopy"> <i
+						class="icon-double-angle-right"></i>批量复制 </a></li>
 				<li name="item_copy_li"><a href="${URL_ROOT}/top/productcopy/cate"> <i
 						class="icon-double-angle-right"></i>整个类目复制 </a></li>
 				
