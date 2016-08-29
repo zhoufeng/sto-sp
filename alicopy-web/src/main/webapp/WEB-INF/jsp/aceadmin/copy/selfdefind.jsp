@@ -134,7 +134,7 @@
 						    <span class="col-xs-4" style="line-height: 2.5">选择的相册的照片数要小于300,否则默认保存到一键复制相册</span>
 						  </div>
 						  
-						  
+
 						  <div class="form-group">
 						    <label for="name-2" class="control-label col-xs-1"> 图片方式:</label>
 						    <div class="col-xs-6">
